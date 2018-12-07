@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
         
         complexHub.on("notifyComplex") { args in
-            let m: AnyObject = args![0] as AnyObject!
+            guard let m = args?[0] else { return }
             print(m)
         }
         

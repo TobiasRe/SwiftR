@@ -398,7 +398,7 @@ open class SignalR: NSObject, SwiftRWebDelegate {
             })
         } else {
             let result = webView.stringByEvaluatingJavaScript(from: script)
-            callback?(result as AnyObject!)
+            callback?(result)
         }
     }
     
@@ -451,21 +451,6 @@ open class SignalR: NSObject, SwiftRWebDelegate {
         }
     }
     
-    // MARK: - Web delegate methods
-    
-#if os(iOS)
-    open func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return shouldHandleRequest(request)
-    }
-#else
-    public func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [AnyHashable : Any]!, request: URLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
-        
-        if shouldHandleRequest(request as URLRequest) {
-            listener.use()
-        }
-    }
-#endif
-    
     class func stringify(_ obj: Any) -> String? {
         // Using an array to start with a valid top level type for NSJSONSerialization
         let arr = [obj]
@@ -478,6 +463,23 @@ open class SignalR: NSObject, SwiftRWebDelegate {
         }
         return nil
     }
+}
+
+// MARK: - Web delegate methods
+
+extension SignalR: UIWebViewDelegate {
+    #if os(iOS)
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
+        return shouldHandleRequest(request)
+    }
+    #else
+    public func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [AnyHashable : Any]!, request: URLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!) {
+        
+        if shouldHandleRequest(request as URLRequest) {
+            listener.use()
+        }
+    }
+    #endif
 }
 
 // MARK: - Hub
