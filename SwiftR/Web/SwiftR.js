@@ -18,7 +18,7 @@ $(function() {
 });
 
 function initialize(baseUrl, isHub) {
-  swiftR.connection = isHub ? $.hubConnection(baseUrl) : $.connection(baseUrl);
+  swiftR.connection = isHub ? $.hubConnection(baseUrl, { useDefaultPath: false }) : $.connection(baseUrl);
   var connection = swiftR.connection;
 
   connection.logging = true;
