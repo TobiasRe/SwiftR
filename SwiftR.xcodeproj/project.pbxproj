@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B2F479A1ADFFE6800416A1A /* SwiftR iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B2F47991ADFFE6800416A1A /* SwiftR iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B2F47A01ADFFE6800416A1A /* SwiftR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2F47951ADFFE6800416A1A /* SwiftR.framework */; };
 		5B2F47A71ADFFE6900416A1A /* SwiftR_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F47A61ADFFE6900416A1A /* SwiftR_iOSTests.swift */; };
 		5B2F47B81ADFFE7300416A1A /* SwiftR Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B2F47B71ADFFE7300416A1A /* SwiftR Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B2F47BE1ADFFE7300416A1A /* SwiftR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2F47B31ADFFE7300416A1A /* SwiftR.framework */; };
@@ -49,6 +48,7 @@
 		66E348201D88CB3900F8081D /* jquery.signalr-2.1.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 66BD9E361C73947700CA428C /* jquery.signalr-2.1.1.min.js */; };
 		66E348211D88CB3B00F8081D /* jquery.signalr-2.1.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 66BD9E371C73947700CA428C /* jquery.signalr-2.1.2.min.js */; };
 		66E348221D88CB4200F8081D /* jquery.signalr-2.2.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6622C1FB1D6BF04E005BDE4B /* jquery.signalr-2.2.1.min.js */; };
+		AF56A73C2428A74B001C636D /* SwiftR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2F47951ADFFE6800416A1A /* SwiftR.framework */; };
 		AFA67C1B21E3896000A751CC /* jquery.signalr-2.3.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = AFA67C1921E3896000A751CC /* jquery.signalr-2.3.0.min.js */; };
 		AFA67C1C21E3896000A751CC /* jquery.signalr-2.3.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = AFA67C1921E3896000A751CC /* jquery.signalr-2.3.0.min.js */; };
 		AFA67C1D21E3896000A751CC /* jquery.signalr-2.4.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = AFA67C1A21E3896000A751CC /* jquery.signalr-2.4.0.min.js */; };
@@ -56,13 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B2F47A11ADFFE6800416A1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B2F47631ADFFE4C00416A1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B2F47941ADFFE6800416A1A;
-			remoteInfo = "SwiftR iOS";
-		};
 		5B2F47BF1ADFFE7300416A1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5B2F47631ADFFE4C00416A1A /* Project object */;
@@ -83,6 +76,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5B2F47B21ADFFE7300416A1A;
 			remoteInfo = "SwiftR Mac";
+		};
+		AF56A7392428A735001C636D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B2F47631ADFFE4C00416A1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B2F47941ADFFE6800416A1A;
+			remoteInfo = "SwiftR iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -156,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B2F47A01ADFFE6800416A1A /* SwiftR.framework in Frameworks */,
+				AF56A73C2428A74B001C636D /* SwiftR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +200,7 @@
 				5B2F48261ADFFFAF00416A1A /* Demo */,
 				5B2F48291AE0001F00416A1A /* Targets */,
 				5B2F476C1ADFFE4C00416A1A /* Products */,
+				AF56A73B2428A74B001C636D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -378,6 +379,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AF56A73B2428A74B001C636D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -429,7 +437,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5B2F47A21ADFFE6800416A1A /* PBXTargetDependency */,
+				AF56A73A2428A735001C636D /* PBXTargetDependency */,
 			);
 			name = "SwiftR iOSTests";
 			productName = "SwiftR iOSTests";
@@ -517,17 +525,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Adam Hartford";
 				TargetAttributes = {
 					5B2F47941ADFFE6800416A1A = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 9QAVRMMZHB;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1120;
 					};
 					5B2F479E1ADFFE6800416A1A = {
 						CreatedOnToolsVersion = 6.3;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1120;
 					};
 					5B2F47B21ADFFE7300416A1A = {
 						CreatedOnToolsVersion = 6.3;
@@ -551,10 +559,9 @@
 			};
 			buildConfigurationList = 5B2F47661ADFFE4C00416A1A /* Build configuration list for PBXProject "SwiftR" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -704,11 +711,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B2F47A21ADFFE6800416A1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B2F47941ADFFE6800416A1A /* SwiftR iOS */;
-			targetProxy = 5B2F47A11ADFFE6800416A1A /* PBXContainerItemProxy */;
-		};
 		5B2F47C01ADFFE7300416A1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5B2F47B21ADFFE7300416A1A /* SwiftR Mac */;
@@ -723,6 +725,11 @@
 			isa = PBXTargetDependency;
 			target = 5B2F47B21ADFFE7300416A1A /* SwiftR Mac */;
 			targetProxy = 9E5EEB871E09BE9200444DEE /* PBXContainerItemProxy */;
+		};
+		AF56A73A2428A735001C636D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B2F47941ADFFE6800416A1A /* SwiftR iOS */;
+			targetProxy = AF56A7392428A735001C636D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -863,7 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -884,7 +891,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -894,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -911,7 +918,7 @@
 				PRODUCT_NAME = SwiftR;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -920,36 +927,30 @@
 		5B2F47AC1ADFFE6900416A1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SwiftR iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		5B2F47AD1ADFFE6900416A1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SwiftR iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adamhartford.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
